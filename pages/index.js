@@ -5,11 +5,12 @@ import { getSortedPostsData } from "../lib/posts";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  console.log(allPostsData);
   return {
     props: {
       allPostsData,
     },
-  };
+  }
 }
 
 export default function Home({ allPostsData }) {
